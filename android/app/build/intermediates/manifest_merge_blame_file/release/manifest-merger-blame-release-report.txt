@@ -1,0 +1,176 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.rnproject"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml
+10
+11    <!-- Application Permissions -->
+12
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:7:5-67
+13-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:7:22-64
+14    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+14-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:8:9-85
+14-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:8:26-82
+15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+15-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:9:5-79
+15-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:9:22-76
+16
+17    <uses-feature android:name="android.hardware.location.gps" />
+17-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:10:9-70
+17-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:10:23-67
+18
+19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+19-->[:react-native-community_netinfo] /home/teamlance21/Videos/RNProject/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/release/AndroidManifest.xml:9:5-79
+19-->[:react-native-community_netinfo] /home/teamlance21/Videos/RNProject/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/release/AndroidManifest.xml:9:22-76
+20    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+20-->[:react-native-biometrics] /home/teamlance21/Videos/RNProject/node_modules/react-native-biometrics/android/build/intermediates/library_manifest/release/AndroidManifest.xml:9:5-72
+20-->[:react-native-biometrics] /home/teamlance21/Videos/RNProject/node_modules/react-native-biometrics/android/build/intermediates/library_manifest/release/AndroidManifest.xml:9:22-69
+21    <uses-permission android:name="android.permission.USE_FINGERPRINT" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+21-->[:react-native-biometrics] /home/teamlance21/Videos/RNProject/node_modules/react-native-biometrics/android/build/intermediates/library_manifest/release/AndroidManifest.xml:10:5-74
+21-->[:react-native-biometrics] /home/teamlance21/Videos/RNProject/node_modules/react-native-biometrics/android/build/intermediates/library_manifest/release/AndroidManifest.xml:10:22-71
+22    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+22-->[com.google.android.gms:play-services-iid:17.0.0] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/61e3e279020c351517b511e7d56d43f0/play-services-iid-17.0.0/AndroidManifest.xml:23:5-82
+22-->[com.google.android.gms:play-services-iid:17.0.0] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/61e3e279020c351517b511e7d56d43f0/play-services-iid-17.0.0/AndroidManifest.xml:23:22-79
+23
+24    <uses-feature
+24-->[com.google.android.gms:play-services-maps:17.0.0] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/3ca81724f46a1af5d268488a528eb8e5/play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
+25        android:glEsVersion="0x00020000"
+25-->[com.google.android.gms:play-services-maps:17.0.0] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/3ca81724f46a1af5d268488a528eb8e5/play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
+26        android:required="true" />
+26-->[com.google.android.gms:play-services-maps:17.0.0] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/3ca81724f46a1af5d268488a528eb8e5/play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
+27
+28    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+28-->[com.android.installreferrer:installreferrer:1.1.2] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/744c11701aa7144a8d6a8e89bcdad6bd/installreferrer-1.1.2/AndroidManifest.xml:9:5-110
+28-->[com.android.installreferrer:installreferrer:1.1.2] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/744c11701aa7144a8d6a8e89bcdad6bd/installreferrer-1.1.2/AndroidManifest.xml:9:22-107
+29
+30    <application
+30-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:12:5-55:19
+31        android:name="com.rnproject.MainApplication"
+31-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:13:7-38
+32        android:allowBackup="false"
+32-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:17:7-34
+33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+33-->[androidx.core:core:1.1.0] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/639e914bfc1efa21e36199d3ff2c5eef/core-1.1.0/AndroidManifest.xml:24:18-86
+34        android:icon="@mipmap/ic_launcher"
+34-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:15:7-41
+35        android:label="@string/app_name"
+35-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:14:7-39
+36        android:roundIcon="@mipmap/ic_launcher_round"
+36-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:16:7-52
+37        android:theme="@style/AppTheme"
+37-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:18:7-38
+38        android:usesCleartextTraffic="true" >
+38-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:19:8-43
+39
+40        <!-- Splsh Activity -->
+41
+42        <activity
+42-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:24:7-35:18
+43            android:name="com.rnproject.SplashActivity"
+43-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:25:9-39
+44            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+44-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:28:9-79
+45            android:exported="true"
+45-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:30:5-28
+46            android:label="@string/app_name"
+46-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:27:9-41
+47            android:theme="@style/SplashTheme"
+47-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:26:9-43
+48            android:windowSoftInputMode="adjustPan" >
+48-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:29:5-44
+49            <intent-filter>
+49-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:31:9-34:23
+50                <action android:name="android.intent.action.MAIN" />
+50-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:32:9-61
+50-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:32:17-58
+51
+52                <category android:name="android.intent.category.LAUNCHER" />
+52-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:33:9-69
+52-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:33:19-66
+53            </intent-filter>
+54        </activity>
+55
+56        <!-- Main Activity -->
+57
+58        <activity
+58-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:41:7-47:18
+59            android:name="com.rnproject.MainActivity"
+59-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:42:9-37
+60            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+60-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:44:9-86
+61            android:label="@string/app_name"
+61-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:43:9-41
+62            android:launchMode="singleTask"
+62-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:45:9-40
+63            android:windowSoftInputMode="adjustResize" >
+63-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:46:9-51
+64        </activity>
+65        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+65-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:48:7-84
+65-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:48:17-81
+66
+67        <!-- Google ID -->
+68
+69        <meta-data
+69-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:53:5-119
+70            android:name="com.google.android.geo.API_KEY"
+70-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:53:16-61
+71            android:value="AIzaSyA8cjzJ0U9YJoxYjW3G7uULqswJMogWNEY" />
+71-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:53:62-117
+72
+73        <uses-library
+73-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:54:3-81
+74            android:name="org.apache.http.legacy"
+74-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:54:17-54
+75            android:required="false" />
+75-->/home/teamlance21/Videos/RNProject/android/app/src/main/AndroidManifest.xml:54:55-79
+76
+77        <receiver
+77-->[:react-native-device-info] /home/teamlance21/Videos/RNProject/node_modules/react-native-device-info/android/build/intermediates/library_manifest/release/AndroidManifest.xml:13:9-21:20
+78            android:name="com.learnium.RNDeviceInfo.RNDeviceReceiver"
+78-->[:react-native-device-info] /home/teamlance21/Videos/RNProject/node_modules/react-native-device-info/android/build/intermediates/library_manifest/release/AndroidManifest.xml:14:13-70
+79            android:enabled="true"
+79-->[:react-native-device-info] /home/teamlance21/Videos/RNProject/node_modules/react-native-device-info/android/build/intermediates/library_manifest/release/AndroidManifest.xml:15:13-35
+80            android:exported="true" >
+80-->[:react-native-device-info] /home/teamlance21/Videos/RNProject/node_modules/react-native-device-info/android/build/intermediates/library_manifest/release/AndroidManifest.xml:16:13-36
+81            <intent-filter>
+81-->[:react-native-device-info] /home/teamlance21/Videos/RNProject/node_modules/react-native-device-info/android/build/intermediates/library_manifest/release/AndroidManifest.xml:18:13-20:29
+82                <action android:name="com.android.vending.INSTALL_REFERRER" />
+82-->[:react-native-device-info] /home/teamlance21/Videos/RNProject/node_modules/react-native-device-info/android/build/intermediates/library_manifest/release/AndroidManifest.xml:19:17-79
+82-->[:react-native-device-info] /home/teamlance21/Videos/RNProject/node_modules/react-native-device-info/android/build/intermediates/library_manifest/release/AndroidManifest.xml:19:25-76
+83            </intent-filter>
+84        </receiver>
+85
+86        <activity
+86-->[androidx.biometric:biometric:1.0.1] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/6ec249d8ca5f46e13b5e5f400316b4ee/biometric-1.0.1/AndroidManifest.xml:28:9-31:67
+87            android:name="androidx.biometric.DeviceCredentialHandlerActivity"
+87-->[androidx.biometric:biometric:1.0.1] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/6ec249d8ca5f46e13b5e5f400316b4ee/biometric-1.0.1/AndroidManifest.xml:29:13-78
+88            android:exported="true"
+88-->[androidx.biometric:biometric:1.0.1] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/6ec249d8ca5f46e13b5e5f400316b4ee/biometric-1.0.1/AndroidManifest.xml:30:13-36
+89            android:theme="@style/DeviceCredentialHandlerTheme" />
+89-->[androidx.biometric:biometric:1.0.1] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/6ec249d8ca5f46e13b5e5f400316b4ee/biometric-1.0.1/AndroidManifest.xml:31:13-64
+90        <activity
+90-->[com.google.android.gms:play-services-base:17.0.0] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/fc8046cb9a5df9499609a5f7f8270b1b/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+91            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+91-->[com.google.android.gms:play-services-base:17.0.0] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/fc8046cb9a5df9499609a5f7f8270b1b/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+92            android:exported="false"
+92-->[com.google.android.gms:play-services-base:17.0.0] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/fc8046cb9a5df9499609a5f7f8270b1b/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+93            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+93-->[com.google.android.gms:play-services-base:17.0.0] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/fc8046cb9a5df9499609a5f7f8270b1b/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+94
+95        <meta-data
+95-->[com.google.android.gms:play-services-basement:17.0.0] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/4bc3d6f2bc0f6e2b5138724afd9d046a/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+96            android:name="com.google.android.gms.version"
+96-->[com.google.android.gms:play-services-basement:17.0.0] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/4bc3d6f2bc0f6e2b5138724afd9d046a/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+97            android:value="@integer/google_play_services_version" />
+97-->[com.google.android.gms:play-services-basement:17.0.0] /home/teamlance21/.gradle/caches/transforms-2/files-2.1/4bc3d6f2bc0f6e2b5138724afd9d046a/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+98    </application>
+99
+100</manifest>

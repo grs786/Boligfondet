@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>ic_back@3x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons-/-ic_back" transform="translate(-4.000000, -4.000000)" fill="#404553" fill-rule="nonzero">
+            <path d="M14.017767,16 L20.6338835,9.19485158 C21.1220388,8.69274891 21.1220388,7.87867966 20.6338835,7.376577 C20.1457281,6.87447433 19.3542719,6.87447433 18.8661165,7.376577 L11.3661165,15.0908627 C10.8779612,15.5929654 10.8779612,16.4070346 11.3661165,16.9091373 L18.8661165,24.623423 C19.3542719,25.1255257 20.1457281,25.1255257 20.6338835,24.623423 C21.1220388,24.1213203 21.1220388,23.3072511 20.6338835,22.8051484 L14.017767,16 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RNProject.iml" filepath="$PROJECT_DIR$/.idea/modules/RNProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/RNProject.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/RNProject.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1119449646/RNProject.lottie-react-native.iml" filepath="$PROJECT_DIR$/.idea/modules/-1119449646/RNProject.lottie-react-native.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/695323252/RNProject.react-native-biometrics.iml" filepath="$PROJECT_DIR$/.idea/modules/695323252/RNProject.react-native-biometrics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2053641722/RNProject.react-native-community_async-storage.iml" filepath="$PROJECT_DIR$/.idea/modules/-2053641722/RNProject.react-native-community_async-storage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1286424567/RNProject.react-native-community_geolocation.iml" filepath="$PROJECT_DIR$/.idea/modules/-1286424567/RNProject.react-native-community_geolocation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1166814809/RNProject.react-native-community_netinfo.iml" filepath="$PROJECT_DIR$/.idea/modules/-1166814809/RNProject.react-native-community_netinfo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/939927033/RNProject.react-native-community_toolbar-android.iml" filepath="$PROJECT_DIR$/.idea/modules/939927033/RNProject.react-native-community_toolbar-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-603756877/RNProject.react-native-device-info.iml" filepath="$PROJECT_DIR$/.idea/modules/-603756877/RNProject.react-native-device-info.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1294717004/RNProject.react-native-gesture-handler.iml" filepath="$PROJECT_DIR$/.idea/modules/-1294717004/RNProject.react-native-gesture-handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-674765882/RNProject.react-native-linear-gradient.iml" filepath="$PROJECT_DIR$/.idea/modules/-674765882/RNProject.react-native-linear-gradient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2001351430/RNProject.react-native-maps.iml" filepath="$PROJECT_DIR$/.idea/modules/2001351430/RNProject.react-native-maps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2003407384/RNProject.react-native-reanimated.iml" filepath="$PROJECT_DIR$/.idea/modules/-2003407384/RNProject.react-native-reanimated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-88188043/RNProject.react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/-88188043/RNProject.react-native-screens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/313114368/RNProject.react-native-splash-screen.iml" filepath="$PROJECT_DIR$/.idea/modules/313114368/RNProject.react-native-splash-screen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-850921333/RNProject.react-native-svg.iml" filepath="$PROJECT_DIR$/.idea/modules/-850921333/RNProject.react-native-svg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1563108514/RNProject.react-native-vector-icons.iml" filepath="$PROJECT_DIR$/.idea/modules/1563108514/RNProject.react-native-vector-icons.iml" />
+    </modules>
+  </component>
+</project>

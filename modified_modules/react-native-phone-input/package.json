@@ -1,0 +1,67 @@
+{
+  "_from": "github:imbudhiraja/react-native-phone-input",
+  "_id": "react-native-phone-input@0.2.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/react-native-phone-input",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "react-native-phone-input@github:imbudhiraja/react-native-phone-input",
+    "name": "react-native-phone-input",
+    "escapedName": "react-native-phone-input",
+    "rawSpec": "github:imbudhiraja/react-native-phone-input",
+    "saveSpec": "github:imbudhiraja/react-native-phone-input",
+    "fetchSpec": null,
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "github:imbudhiraja/react-native-phone-input#e80ad0878877956f7615bd514b8c58c22452e033",
+  "_spec": "react-native-phone-input@github:imbudhiraja/react-native-phone-input",
+  "_where": "/Users/teamlance-mac/Downloads/ReactNativeBaseKit-master/ReactNativeBaseKit",
+  "author": {
+    "name": "Watcharachai Kanjaikaew",
+    "url": "https://github.com/thegamenicorus"
+  },
+  "bugs": {
+    "url": "https://github.com/thegamenicorus/react-native-phone-input/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "google-libphonenumber": "^2.0.9",
+    "lodash": "^4.17.4",
+    "prop-types": "^15.5.10"
+  },
+  "deprecated": false,
+  "description": "Phone input box for React Native",
+  "homepage": "https://github.com/thegamenicorus/react-native-phone-input",
+  "keywords": [
+    "react-native",
+    "phone",
+    "telephone",
+    "phone input",
+    "input",
+    "tel",
+    "input text",
+    "international",
+    "react-native-component",
+    "ios",
+    "android"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "react-native-phone-input",
+  "peerDependencies": {
+    "react-native": ">= 0.25"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/thegamenicorus/react-native-phone-input.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.2.0"
+}

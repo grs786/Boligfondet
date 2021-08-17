@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="188px" height="188px" viewBox="0 0 188 188" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>ic_done@3x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <circle id="Oval" fill="#0EB9A6" cx="94" cy="94" r="94"></circle>
+            <path d="M49.7016797,88.0718163 C65.5839533,96.1454754 76.9961323,103.262654 83.9382164,109.423352 C122.605473,51.9486557 157.292734,15.474205 188,0 C141.545988,50.6532209 109.24517,98.3198876 91.0975445,143 C80.2478602,127.13234 66.0492012,109.341722 48.5015676,89.6281471 L48.5015531,89.6281601 C48.1343421,89.2156235 48.1710858,88.5835132 48.5836224,88.2163022 C48.8910613,87.9426418 49.3347725,87.8853013 49.7016797,88.0718163 Z" id="Path-9" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>
