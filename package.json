@@ -30,7 +30,7 @@
     "react-native": "0.63.4",
     "react-native-animated-nav-tab-bar": "^3.1.4",
     "react-native-biometrics": "^2.1.4",
-    "react-native-chart-kit": "^6.11.0",
+    "react-native-chart-kit": "file:./modified_modules/react-native-chart-kit",
     "react-native-device-info": "^5.5.3",
     "react-native-gesture-handler": "^1.7.0",
     "react-native-image-slider": "^2.0.3",

@@ -6,17 +6,40 @@ import styles from './myElendommer-styles';
 import * as userActions from '../../actions/user-actions-types';
 import { connect } from 'react-redux';
 import _ from 'lodash';
-import ImageSlider from 'react-native-image-slider';
-import Slideshow from 'react-native-image-slider-show';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import Geolocation from '@react-native-community/geolocation';
 import StaticData from '../../utilities/static-data';
 import { Defs, LinearGradient, Stop } from 'react-native-svg'
-import { LineChart, Grid, PieChart  } from 'react-native-svg-charts'
+import { LineChart, Grid, } from 'react-native-svg-charts'
 import Carousel, { Pagination } from 'react-native-snap-carousel' // 3.6.0
+import { PieChart } from 'react-native-chart-kit';
 
-const linearData = [ 50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80 ]
+const linearData = [50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80]
+
+
+const chartConfig = {
+  color: (opacity = 1) => `rgba(35,113,231, ${opacity})`,
+};
+const peiChartData = [
+  {
+    name: "Boligfondet",
+    population: 285000,
+    color: "#2B6A5E",
+    legendFontColor: "#7F7F7F",
+  },
+  {
+    name: "Min andel",
+    population: 280000,
+    color: "#3C8E81",
+    legendFontColor: "#7F7F7F",
+  },
+  {
+    name: "Andre som deg",
+    population: 52761,
+    color: "#DAD7D9",
+    legendFontColor: "#7F7F7F",
+  },
+];
 
 class MineElendommer extends React.Component {
   constructor(props) {
@@ -57,12 +80,12 @@ class MineElendommer extends React.Component {
 
   Gradient = () => (
     <Defs key={'gradient'}>
-        <LinearGradient id={'gradient'} x1={'0'} y={'0%'} x2={'100%'} y2={'0%'}>
-            <Stop offset={'0%'} stopColor={Constants.Colors.PRIMARY_COLOR}/>
-            <Stop offset={'100%'} stopColor={Constants.Colors.PRIMARY_COLOR}/>
-        </LinearGradient>
+      <LinearGradient id={'gradient'} x1={'0'} y={'0%'} x2={'100%'} y2={'0%'}>
+        <Stop offset={'0%'} stopColor={Constants.Colors.PRIMARY_COLOR} />
+        <Stop offset={'100%'} stopColor={Constants.Colors.PRIMARY_COLOR} />
+      </LinearGradient>
     </Defs>
-)
+  )
 
 
   componentDidMount() {
@@ -235,14 +258,14 @@ class MineElendommer extends React.Component {
 
   renderComponent = ({ item }) => {
     const data = [
-      { label: 'Jan',  value: 500,  bottomLabel:'1ar', status:0 },
-      { label: 'Feb',  value: 312,  bottomLabel:'6m',  status:1 },
-      { label: 'Mar',  value: 424,  bottomLabel:'12m', status:1 },
-      { label: 'Apr',  value: 745,  bottomLabel:'3ar', status:0 },
-      { label: 'May',  value: 89 ,  bottomLabel:'1ar', status:1 },
-      { label: 'Jun',  value: 434 , bottomLabel:'5ar', status:1 },
-      { label: 'July', value: 634 , status:0 },
-     
+      { label: 'Jan', value: 500, bottomLabel: '1ar', status: 0 },
+      { label: 'Feb', value: 312, bottomLabel: '6m', status: 1 },
+      { label: 'Mar', value: 424, bottomLabel: '12m', status: 1 },
+      { label: 'Apr', value: 745, bottomLabel: '3ar', status: 0 },
+      { label: 'May', value: 89, bottomLabel: '1ar', status: 1 },
+      { label: 'Jun', value: 434, bottomLabel: '5ar', status: 1 },
+      { label: 'July', value: 634, status: 0 },
+
     ]
     const fill = Constants.Colors.PRIMARY_COLOR
     const data1 = [5, 8, 6, 7]
@@ -250,7 +273,7 @@ class MineElendommer extends React.Component {
     const data2 = [9, 7, 12, 9]
       .map((value) => ({ value }))
 
-  
+
     const { hi, padinDevident, totalValue } = Constants.i18n.dashboard;
     switch (this.state.activeSlide) {
       case 0:
@@ -291,29 +314,29 @@ class MineElendommer extends React.Component {
 
       case 1:
         const barData = [
-        {
-          data: data1,
-          svg: {
-            fill: Constants.Colors.PRIMARY_COLOR,
-            x: -10,
-  
+          {
+            data: data1,
+            svg: {
+              fill: Constants.Colors.PRIMARY_COLOR,
+              x: -10,
+
+            },
           },
-        },
-        {
-          data: data2,
-          svg: {
-            fill: Constants.Colors.LIGHT_GREEN,
-  
+          {
+            data: data2,
+            svg: {
+              fill: Constants.Colors.LIGHT_GREEN,
+
+            },
           },
-        },
-      ]
+        ]
         return (
           <View style={styles.barChatContainer}>
             <View style={styles.barChatSubContainer}>
               <Text style={styles.textInfo}>{'2.6 %'}</Text>
               <Text style={styles.textInfo1}>{'84,375'}</Text>
             </View>
-           <BarChart data={data} round={100} unit="€"/>
+            <BarChart data={data} round={100} unit="€" />
 
           </View>
 
@@ -322,17 +345,17 @@ class MineElendommer extends React.Component {
       case 2:
         return (
           <LineChart
-          style={ { height: 200 } }
-          data={ linearData }
-          contentInset={ { top: 20, bottom: 20 } }
-          svg={{
+            style={{ height: 200 }}
+            data={linearData}
+            contentInset={{ top: 20, bottom: 20 }}
+            svg={{
               strokeWidth: 2,
               stroke: 'url(#gradient)',
-          }}
-      >
-          <Grid/>
-        {this.Gradient()}
-      </LineChart>
+            }}
+          >
+            <Grid />
+            {this.Gradient()}
+          </LineChart>
         )
         break;
     }
@@ -389,8 +412,8 @@ class MineElendommer extends React.Component {
       <View>
         <View style={styles.documentItems}>
           <View style={styles.docSubContainer}>
-          <Text style={styles.docTitle}>{item.title}</Text>
-            <Constants.Images.Pdf height={35} width={25}/>
+            <Text style={styles.docTitle}>{item.title}</Text>
+            <Constants.Images.Pdf height={35} width={25} />
           </View>
         </View>
       </View>
@@ -401,7 +424,7 @@ class MineElendommer extends React.Component {
   renderInfo = () => {
     return (
       <View style={styles.infoContainer}>
-        
+
         <View style={styles.infoRowContainer}>
           <Text style={styles.infoKey}>{'Aksjekiasse eiendom'}</Text>
           <Text style={styles.infoValue}>{'B'}</Text>
@@ -458,48 +481,57 @@ class MineElendommer extends React.Component {
           {this.renderSmallCardView()}
           {this.renderBuilder()}
           {this.renderLocation()}
-           <View style={styles.aksjeStyle}>
-                      <Text style={[styles.labelText,{top:30}]}>{'Aksje & Utbytte'}</Text>
-                    <View style={styles.crouselContainer}>
-          <Carousel
-            ref={ ref => this.carouselRef = ref }
-            data={ StaticData.propertyDetailData }
-            renderItem={this.renderComponent}
-            onSnapToItem={this.SnapItemData}
-            sliderWidth={Constants.BaseStyle.DEVICE_WIDTH}
-            itemWidth={Constants.BaseStyle.DEVICE_WIDTH - 35}
-            slideStyle={{ width : Constants.BaseStyle.DEVICE_WIDTH - 35 }}
-          />
+          <View style={styles.aksjeStyle}>
+            <Text style={[styles.labelText, { top: 30 }]}>{'Aksje & Utbytte'}</Text>
+            <View style={styles.crouselContainer}>
+              <Carousel
+                ref={ref => this.carouselRef = ref}
+                data={StaticData.propertyDetailData}
+                renderItem={this.renderComponent}
+                onSnapToItem={this.SnapItemData}
+                sliderWidth={Constants.BaseStyle.DEVICE_WIDTH}
+                itemWidth={Constants.BaseStyle.DEVICE_WIDTH - 35}
+                slideStyle={{ width: Constants.BaseStyle.DEVICE_WIDTH - 35 }}
+              />
+            </View>
+            <View style={styles.paginationMainView}>
+              <Pagination
+                dotsLength={3}
+                renderDots={activeIndex => (
+                  StaticData.dotIcons.map((screen, i) => (
+                    <TouchableOpacity
+                      activeOpacity={0.7}
+                      style={styles.iconMainView}
+                      key={i}
+                      onPress={() => {
+                        this.carouselRef._snapToItem(this.carouselRef._getPositionIndex(i));
+                      }}
+                    >
+                      <Image source={screen.iconActive} style={styles.iconView} />
+
+                    </TouchableOpacity>
+                  ))
+                )}
+                activeDotIndex={this.state.activeSlide}
+              />
+            </View>
           </View>
-        <View style={styles.paginationMainView}>
-        <Pagination
-         dotsLength={3}
-          renderDots={ activeIndex => (
-            StaticData.dotIcons.map((screen, i) => (
-              <TouchableOpacity
-                activeOpacity={0.7}
-                style={styles.iconMainView}
-                key={ i }
-                onPress={() => {
-                  this.carouselRef._snapToItem(this.carouselRef._getPositionIndex(i));
-                }}
-              >
-                <Image source={screen.iconActive} style={styles.iconView}/>
-               
-              </TouchableOpacity>
-            ))
-          )}
-          activeDotIndex={ this.state.activeSlide }
-        />
-        </View>
-                    </View> 
           <Text style={[styles.labelText, { marginTop: 15 }]}>{'Eirskap'}</Text>
-           <PieChart
-          style={{ height: 200 }}
-          outerRadius={'80%'}
-          innerRadius={'45%'}
-          data={data1}
-        /> 
+          <PieChart
+            data={peiChartData}
+            width={380}
+            height={150}
+            chartConfig={chartConfig}
+            accessor={"population"}
+            backgroundColor={"transparent"}
+            hasLegend={true}
+            style={{
+              marginTop: 10,
+              right: 10,
+
+            }}
+
+          />
           <Text
             onLayout={({ nativeEvent: { layout: { width } } }) => {
               this.setState({ labelWidth: width });
@@ -516,13 +548,13 @@ class MineElendommer extends React.Component {
           <Text style={[styles.labelText, { marginTop: 15 }]}>{'Documents'}</Text>
           <View style={styles.documentsContainer}>
             <View style={styles.mainTop}>
-            <View style={styles.docViewStyle}>
-              <Text style={styles.docTitleText}>{'Boligfondet'}</Text>
-              <Constants.Images.Detail2 />
-            </View>
+              <View style={styles.docViewStyle}>
+                <Text style={styles.docTitleText}>{'Boligfondet'}</Text>
+                <Constants.Images.Detail2 />
+              </View>
               <TouchableOpacity onPress={(index) => {
                 this.flatRef.scrollToIndex({ animated: true, index: 1 });
-              }} style={{ top: 30, marginLeft:10 }}>
+              }} style={{ top: 30, marginLeft: 10 }}>
                 <Image source={Constants.Images.prevoius} style={styles.arrowIcon} />
               </TouchableOpacity>
               <FlatList
@@ -534,17 +566,17 @@ class MineElendommer extends React.Component {
                 data={StaticData.documentsData}
                 renderItem={this.renderDocuments} />
               <TouchableOpacity onPress={(index) => { this.flatRef.scrollToIndex({ animated: true, index: 5 }) }} style={styles.nextIcon}>
-                <Image source={Constants.Images.next}  style={styles.arrowIcon} />
+                <Image source={Constants.Images.next} style={styles.arrowIcon} />
               </TouchableOpacity>
             </View>
           </View>
           <View style={styles.documentsContainer}>
-           
+
             <View style={styles.mainTop}>
-            <View style={styles.docViewStyle}>
-              <Text style={styles.docTitleText}>{'Utbytte'}</Text>
-              <Constants.Images.Money1 />
-            </View>
+              <View style={styles.docViewStyle}>
+                <Text style={styles.docTitleText}>{'Utbytte'}</Text>
+                <Constants.Images.Money1 />
+              </View>
               <TouchableOpacity onPress={(index) => {
                 this.secondflatRef.scrollToIndex({ animated: true, index: 1 });
               }} style={styles.prevIcon}>
@@ -559,20 +591,20 @@ class MineElendommer extends React.Component {
                 data={StaticData.documentsData}
                 renderItem={this.renderDocuments} />
               <TouchableOpacity onPress={(index) => { this.secondflatRef.scrollToIndex({ animated: true, index: 5 }) }} style={styles.nextIcon}>
-                <Image source={Constants.Images.next}  style={styles.arrowIcon} />
+                <Image source={Constants.Images.next} style={styles.arrowIcon} />
               </TouchableOpacity>
             </View>
           </View>
           <View style={styles.documentsContainer}>
-           
+
             <View style={styles.mainTop}>
-            <View style={styles.docViewStyle}>
-              <Text style={styles.docTitleText}>{'Regnskap'}</Text>
-              <Constants.Images.Calculator />
-            </View>
+              <View style={styles.docViewStyle}>
+                <Text style={styles.docTitleText}>{'Regnskap'}</Text>
+                <Constants.Images.Calculator />
+              </View>
               <TouchableOpacity onPress={(index) => {
                 this.thirdflatRef.scrollToIndex({ animated: true, index: 1 });
-              }} style={{ top: 30, marginLeft:20 }}>
+              }} style={{ top: 30, marginLeft: 20 }}>
                 <Image source={Constants.Images.prevoius} style={styles.arrowIcon} />
               </TouchableOpacity>
               <FlatList
@@ -584,16 +616,16 @@ class MineElendommer extends React.Component {
                 data={StaticData.documentsData}
                 renderItem={this.renderDocuments} />
               <TouchableOpacity onPress={(index) => { this.thirdflatRef.scrollToIndex({ animated: true, index: 5 }) }} style={styles.nextIcon}>
-                <Image source={Constants.Images.next}  style={styles.arrowIcon} />
+                <Image source={Constants.Images.next} style={styles.arrowIcon} />
               </TouchableOpacity>
             </View>
           </View>
           <View style={styles.infoMainContainer}>
-          <View style={styles.infoSubContainer}>
-          <Text style={styles.docTitleText}>{'Aksje Info'}</Text>
-        </View>
-          {this.renderInfo()}
-        </View>
+            <View style={styles.infoSubContainer}>
+              <Text style={styles.docTitleText}>{'Aksje Info'}</Text>
+            </View>
+            {this.renderInfo()}
+          </View>
         </View>
       </ScrollView>
     )
