@@ -12,19 +12,19 @@ import GetStarted from '../containers/auth/getStarted';
 import { Invester, InvesterBuy, MineEllendommer, InvesterTab } from '../containers/invester'
 
 export default {
-  ChangePassword: {screen: ChangePassword},
-  Dashboard: {screen: Dashboard},
-  ForgotPassword: {screen: ForgotPassword},
-  Loader: {screen: Loader},
-  Login: {screen: Login},
-  Signup1: {screen: Signup1},
-  Signup2: {screen: Signup2},
-  Signup3: {screen: Signup3},
-  Welcome: {screen: Welcome},
-  LoginSecurity: {screen: LoginSecurity},
-  GetStarted: {screen: GetStarted},
-  Invester: {screen: Invester},
-  InvesterBuy: {screen: InvesterBuy},
+  ChangePassword: { screen: ChangePassword },
+  Dashboard: { screen: Dashboard },
+  ForgotPassword: { screen: ForgotPassword },
+  Loader: { screen: Loader },
+  Login: { screen: Login},
+  Signup1: { screen: Signup1 },
+  Signup2: { screen: Signup2 },
+  Signup3: { screen: Signup3 },
+  Welcome: { screen: Welcome },
+  LoginSecurity: { screen: LoginSecurity },
+  GetStarted: { screen: GetStarted },
+  Invester: { screen: Invester },
+  InvesterBuy: {screen: InvesterBuy },
   MineEllendommer: { screen: MineEllendommer },
-  InvesterTab: { screen: InvesterTab}
+  InvesterTab: { screen: InvesterTab }
 };

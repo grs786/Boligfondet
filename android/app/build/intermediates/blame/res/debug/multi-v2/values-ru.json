@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/teamlance21/Videos/RNProject/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ru/values-ru.xml",
+            "outputFile": "/home/teamlance21/Desktop/Boligfondet/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ru/values-ru.xml",
             "map": [
                 {
                     "source": "/home/teamlance21/.gradle/caches/transforms-2/files-2.1/4bc3d6f2bc0f6e2b5138724afd9d046a/jetified-play-services-basement-17.0.0/res/values-ru/values.xml",

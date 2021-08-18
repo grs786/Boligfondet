@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/teamlance21/Videos/RNProject/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sv/values-sv.xml",
+            "outputFile": "/home/teamlance21/Desktop/Boligfondet/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sv/values-sv.xml",
             "map": [
                 {
                     "source": "/home/teamlance21/.gradle/caches/transforms-2/files-2.1/6ec249d8ca5f46e13b5e5f400316b4ee/biometric-1.0.1/res/values-sv/values-sv.xml",
