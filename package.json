@@ -45,6 +45,7 @@
     "react-native-phone-input": "file:./modified_modules/react-native-phone-input",
     "react-native-reanimated": "^2.2.0",
     "react-native-redux-toast": "^1.0.3",
+    "react-native-responsive-linechart": "file:./modified_modules/react-native-responsive-linechart",
     "react-native-safe-module": "^1.2.0",
     "react-native-screens": "^2.2.0",
     "react-native-snap-carousel": "^3.9.1",

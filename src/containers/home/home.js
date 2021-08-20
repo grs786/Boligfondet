@@ -9,21 +9,11 @@ import Constants from '../../constants';
 import * as userActions from '../../actions/user-actions-types';
 import styles from './home-styles';
 import StaticData from '../../utilities/static-data';
-// import { LineChart, XAxis, Grid, BarChart } from 'react-native-svg-charts'
 import Carousel, { Pagination } from 'react-native-snap-carousel' // 3.6.0
-import VerticalBarGraph from '@chartiful/react-native-vertical-bar-graph'
-import {
-  // LineChart,
-  PieChart,
-  ProgressChart,
-  ContributionGraph,
-  StackedBarChart
-} from "react-native-chart-kit";
 import { Defs, LinearGradient, Stop } from 'react-native-svg'
-import { LineChart, Grid } from 'react-native-svg-charts'
+import { Chart, VerticalAxis, HorizontalAxis, Line,Area,Tooltip } from 'react-native-responsive-linechart'
 
 
-const linearData = [ 50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80 ]
 
 class Home extends React.Component {
 
@@ -55,12 +45,23 @@ class Home extends React.Component {
       { label: 'July', value: 634 , status:0 },
      
     ]
-    const fill = Constants.Colors.PRIMARY_COLOR
-    const data1 = [5, 8, 6, 7]
-      .map((value) => ({ value }))
-    const data2 = [9, 7, 12, 9]
-      .map((value) => ({ value }))
-
+      const data1 = [
+        { x: -2, y: 1 },
+        { x: -1, y: 0 },
+        { x: 8, y: 13 },
+        { x: 9, y: 11.5 },
+        { x: 10, y: 12 }
+      ]
+      
+      const data2 = [
+        { x: -2, y: 15 },
+        { x: -1, y: 10 },
+        { x: 0, y: 12 },
+        { x: 1, y: 7 },
+        { x: 8, y: 12 },
+        { x: 9, y: 13.5 },
+        { x: 10, y: 18 }
+      ]
   
     const { hi, padinDevident, totalValue } = Constants.i18n.dashboard;
     switch (this.state.activeSlide) {
@@ -132,18 +133,27 @@ class Home extends React.Component {
         break;
       case 2:
         return (
-          <LineChart
-          style={ { height: 200 } }
-          data={ linearData }
-          contentInset={ { top: 20, bottom: 20 } }
-          svg={{
-              strokeWidth: 2,
-              stroke: 'url(#gradient)',
-          }}
-      >
-          <Grid/>
-        {this.Gradient()}
-      </LineChart>
+      <Chart
+  style={{ height: 200, width: '100%' }}
+  data={[
+    { x: -2, y: 15 },
+    { x: -1, y: 10 },
+    { x: 0, y: 12 },
+    { x: 1, y: 7 },
+    { x: 2, y: 6 },
+    { x: 3, y: 3 },
+    { x: 4, y: 5 },
+    { x: 5, y: 8 },
+  ]}
+  padding={{  bottom: 40, right: 20, top: 20 }}
+  xDomain={{ min: -2, max: 5 }}
+  yDomain={{ min: -4, max: 20 }}
+>
+  <HorizontalAxis tickCount={5} />
+    <Area theme={{ gradient: { from: { color: 'rgba(59,216,199,0.1)' }, to: { color: '#FFFFFF', opacity: 0.5 } }}} />
+  <Line theme={{ stroke: { color: '#009080', width: 3 }, scatter: { default: { width: 8, height: 8, rx: 4, color: '#009080' }, selected: { color: 'red' } } }} />
+</Chart>
+    
         )
         break;
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, TouchableHighlight, ScrollView, Alert, FlatList, Dimensions } from 'react-native';
+import { View, Text, Image, TouchableOpacity, ScrollView, FlatList, Dimensions } from 'react-native';
 import Constants from '../../constants';
 import { Header, CardCarousel, BarChart } from '../../components';
 import styles from './myElendommer-styles';
@@ -13,13 +13,13 @@ import { Defs, LinearGradient, Stop } from 'react-native-svg'
 import { LineChart, Grid, } from 'react-native-svg-charts'
 import Carousel, { Pagination } from 'react-native-snap-carousel' // 3.6.0
 import { PieChart } from 'react-native-chart-kit';
-
-const linearData = [50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80]
+import { Chart, VerticalAxis, HorizontalAxis, Line,Area,Tooltip } from 'react-native-responsive-linechart'
 
 
 const chartConfig = {
   color: (opacity = 1) => `rgba(35,113,231, ${opacity})`,
 };
+
 const peiChartData = [
   {
     name: "Boligfondet",
@@ -214,12 +214,10 @@ class MineElendommer extends React.Component {
               ...locations,
               latitudeDelta: 0.0115,
               longitudeDelta: 0.02121,
-            }}
-          >
+            }}>
             <Marker.Animated
               coordinate={locations}
-              title={'Gauravvaddo, Opp Lane Of Pizza Hut ,Calangute, India'}
-            >
+              title={'Gauravvaddo, Opp Lane Of Pizza Hut ,Calangute, India'}>
               <Constants.Images.Home height={20} width={20} />
             </Marker.Animated>
           </MapView>
@@ -344,18 +342,28 @@ class MineElendommer extends React.Component {
         break;
       case 2:
         return (
-          <LineChart
-            style={{ height: 200 }}
-            data={linearData}
-            contentInset={{ top: 20, bottom: 20 }}
-            svg={{
-              strokeWidth: 2,
-              stroke: 'url(#gradient)',
-            }}
-          >
-            <Grid />
-            {this.Gradient()}
-          </LineChart>
+          <Chart
+          style={{ height: 200, width: '95%' }}
+          data={[
+            { x: -2, y: 15 },
+            { x: -1, y: 10 },
+            { x: 0, y: 12 },
+            { x: 1, y: 7 },
+            { x: 2, y: 6 },
+            { x: 3, y: 3 },
+            { x: 4, y: 5 },
+            { x: 5, y: 8 },
+          ]}
+          padding={{  bottom: 40, right: 20, top: 20 }}
+          xDomain={{ min: -2, max: 5 }}
+          yDomain={{ min: -4, max: 20 }}
+        >
+          <HorizontalAxis tickCount={5} />
+            <Area theme={{ gradient: { from: { color: 'rgba(59,216,199,0.1)' }, to: { color: '#FFFFFF', opacity: 0.5 } }}} />
+          <Line theme={{ stroke: { color: '#009080', width: 3 }, scatter: { default: { width: 8, height: 8, rx: 4, color: '#009080' }, selected: { color: 'red' } } }} />
+        
+           </Chart>
+            
         )
         break;
     }
@@ -424,7 +432,6 @@ class MineElendommer extends React.Component {
   renderInfo = () => {
     return (
       <View style={styles.infoContainer}>
-
         <View style={styles.infoRowContainer}>
           <Text style={styles.infoKey}>{'Aksjekiasse eiendom'}</Text>
           <Text style={styles.infoValue}>{'B'}</Text>
@@ -447,18 +454,6 @@ class MineElendommer extends React.Component {
     const { navigation: { goBack } } = this.props;
     const { labelWidth, selectedSlice } = this.state;
     const { label, value } = selectedSlice;
-    const keys = ['google', 'facebook', 'linkedin', 'youtube', 'Twitter'];
-    const values = [15, 25, 35, 45, 55];
-    const colors = ['#600080', '#9900cc', '#c61aff', '#d966ff', '#ecb3ff']
-    const data1 = keys.map((key, index) => {
-      return {
-        key,
-        value: values[index],
-        svg: { fill: colors[index] },
-        arc: { outerRadius: (70 + values[index]) + '%', padAngle: label === key ? 0.1 : 0 },
-        onPress: () => this.setState({ selectedSlice: { label: key, value: values[index] } })
-      }
-    })
     const deviceWidth = Dimensions.get('window').width
 
     return (
@@ -519,19 +514,16 @@ class MineElendommer extends React.Component {
           <Text style={[styles.labelText, { marginTop: 15 }]}>{'Eirskap'}</Text>
           <PieChart
             data={peiChartData}
-            width={380}
+            width={Constants.BaseStyle.DEVICE_WIDTH}
             height={150}
             chartConfig={chartConfig}
             accessor={"population"}
-            backgroundColor={"transparent"}
             hasLegend={true}
             style={{
               marginTop: 10,
               right: 10,
-
             }}
-
-          />
+            />
           <Text
             onLayout={({ nativeEvent: { layout: { width } } }) => {
               this.setState({ labelWidth: width });
@@ -565,7 +557,7 @@ class MineElendommer extends React.Component {
                 horizontal
                 data={StaticData.documentsData}
                 renderItem={this.renderDocuments} />
-              <TouchableOpacity onPress={(index) => { this.flatRef.scrollToIndex({ animated: true, index: 5 }) }} style={styles.nextIcon}>
+              <TouchableOpacity onPress={() => { this.flatRef.scrollToIndex({ animated: true, index: 5 }) }} style={styles.nextIcon}>
                 <Image source={Constants.Images.next} style={styles.arrowIcon} />
               </TouchableOpacity>
             </View>

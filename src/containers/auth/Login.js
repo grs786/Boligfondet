@@ -182,6 +182,7 @@ handleScrollView = ref => {
             label={passwordText}
             labelFontSize={12}
             value={password}
+            secureTextEntry={true}
             onChangeText={text => this.changeHandler('password', text)}
             tintColor={Constants.Colors.GRAY}
             errorColor={Constants.Colors.ERROR}
