@@ -265,13 +265,8 @@ class MineElendommer extends React.Component {
       { label: 'July', value: 634, status: 0 },
 
     ]
-    const fill = Constants.Colors.PRIMARY_COLOR
-    const data1 = [5, 8, 6, 7]
-      .map((value) => ({ value }))
-    const data2 = [9, 7, 12, 9]
-      .map((value) => ({ value }))
-
-
+    
+   
     const { hi, padinDevident, totalValue } = Constants.i18n.dashboard;
     switch (this.state.activeSlide) {
       case 0:

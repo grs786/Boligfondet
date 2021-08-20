@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   phoneInput: {
     width: "100%",
     alignSelf: 'center',
-    borderBottomColor: Constants.Colors.BLACK,  
+    borderBottomColor: Constants.Colors.GRAY,  
 
   },
   warningText: {
@@ -59,6 +59,7 @@ const PhoneNumberInput = (props) => {
           value={phoneNumber}
           onChangeText={onChangeNumber}
           containerStyle={styles.phoneInput}
+          style={styles.phoneInput}
         />
       </View>
       {/* {phoneNumber?.length > 0 && !isValidNumber && <Text style={styles.warningText}>Not valid number</Text>} */}

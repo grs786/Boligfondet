@@ -19,6 +19,7 @@ import Constants from '../../constants';
 import { AuthStyles } from '../../styles';
 import { Button, Header, PhoneNumberInput } from '../../components';
 import { TextField } from 'react-native-material-textfield';
+import styles from '../../../modified_modules/react-native-phone-input/lib/styles';
 
 class Signup1 extends React.Component {
   static propTypes = {
@@ -190,6 +191,7 @@ class Signup1 extends React.Component {
             keyboardShouldPersistTaps="always">
             {errorLabel !== '' && <Text >{`*${errorLabel}`} </Text>}
             <TextField
+              style={AuthStyles.textfiledStyle}
               activeLineWidth={1}
               ref={this.fullnameRef}
               label={fullnameLabel}
@@ -217,6 +219,7 @@ class Signup1 extends React.Component {
               onSubmitEditing={() => this.emailRef.current.focus()}
             />
             <TextField
+              style={AuthStyles.textfiledStyle}
               activeLineWidth={1}
               ref={this.emailRef}
               label={emailId}
@@ -256,6 +259,7 @@ class Signup1 extends React.Component {
               returnCountryCode={(dialCode) => this.setState({ countryCode: dialCode })} />
 
             <TextField
+              style={AuthStyles.textfiledStyle}
               activeLineWidth={1}
               ref={this.zipCodeRef}
               label={zipCideLabel}
@@ -284,6 +288,7 @@ class Signup1 extends React.Component {
               onSubmitEditing={() => this.passwordRef.current.focus()}
             />
             <TextField
+              style={AuthStyles.textfiledStyle}
               activeLineWidth={1}
               ref={this.passwordRef}
               label={passwordText}
@@ -294,7 +299,6 @@ class Signup1 extends React.Component {
               tintColor={Constants.Colors.GRAY}
               errorColor={Constants.Colors.ERROR}
               error={passwordError}
-              keyboardType={'email-address'}
               returnKeyType={'next'}
               placeholderTextColor={Constants.Colors.GRAY}
               labelTextStyle={Constants.Colors.BLACK}

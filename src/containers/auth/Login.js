@@ -150,6 +150,7 @@ handleScrollView = ref => {
              {errorLabel !== '' && <Text >{`*${errorLabel}`} </Text>}
              </View>
             <TextField
+            style={AuthStyles.textfiledStyle}
             activeLineWidth={1}
             ref={this.usernameRef}
             label={emailId}
@@ -177,6 +178,7 @@ handleScrollView = ref => {
             onSubmitEditing={() => this.passwordRef.current.focus()}
           />
            <TextField
+            style={AuthStyles.textfiledStyle}
             activeLineWidth={1}
             ref={this.passwordRef}
             label={passwordText}
@@ -187,7 +189,6 @@ handleScrollView = ref => {
             tintColor={Constants.Colors.GRAY}
             errorColor={Constants.Colors.ERROR}
             error={passwordError}
-            keyboardType={'email-address'}
             returnKeyType={'next'}
             placeholderTextColor={Constants.Colors.GRAY}
             labelTextStyle={Constants.Colors.BLACK}

@@ -114,6 +114,10 @@ const styles = {
   logoIcon: {
     top:40
   },
+  textfiledStyle: {
+  ...Constants.Fonts.OpenSans.regular,
+  color: Constants.Colors.TEXT_COLOR2
+  },
 
   /// Login Security Screen Style
   subContainer: {

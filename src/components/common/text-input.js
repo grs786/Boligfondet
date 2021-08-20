@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     marginLeft: (Constants.BaseStyle.DEVICE_WIDTH / 100) * 3,
   },
   textInputStyle: {
+    top:10,
     color: Constants.Colors.BLACK,
     flex: 1,
     ...Constants.Fonts.regular,

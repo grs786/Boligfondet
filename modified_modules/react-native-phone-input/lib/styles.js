@@ -19,11 +19,11 @@ export default StyleSheet.create({
   countryCodeText: {
     ...Constants.Fonts.OpenSans.regular,
     // color: Constants.Colors.TEXT_COLOR2,
-    bottom:12
+    bottom:5
   },
   downArrow: {
     color: Constants.Colors.PRIMARY_COLOR,
-    marginLeft: 8
+    marginLeft: 8,
   },
   buttonTextStyle: {
     fontSize: 14,
@@ -87,6 +87,6 @@ export default StyleSheet.create({
     height:15,
     width:15,
     left:2,
-    bottom:12
+    bottom:5
   }
 });
